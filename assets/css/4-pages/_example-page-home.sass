@@ -2,6 +2,24 @@ body
   margin: 10px
   background-color: $bg
   overflow-x: hidden
+header
+  margin: 0 auto
+  .logo
+    display: block
+    margin: auto
+    text-align: center
+nav
+  +nav
+  display: block
+  margin: 20px auto
+  max-width: 1200px
+
+.slider
+  display: flex
+  justify-content: center
+.toplinks
+  display: flex
+  justify-content: space-around
 
 .page-home
   text-align: center
@@ -25,3 +43,5 @@ body
     margin-bottom: 50px
     &:last-child
       margin-bottom: 0px
+  .main
+    display: flex
