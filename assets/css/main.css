@@ -341,7 +341,36 @@ header {
   header .logo {
     display: block;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    max-width: 799px;
+    max-height: 120px;
+    width: 100%;
+    height: 100%; }
+
+h1 {
+  font-size: 24px;
+  font-family: "Arial";
+  color: #002653;
+  line-height: 1.2;
+  text-align: left; }
+
+h2 {
+  font-size: 16px;
+  font-family: "Arial";
+  color: #002753;
+  line-height: 1.66;
+  text-align: left; }
+
+h3 {
+  font-size: 20px;
+  font-family: "GoudyStd";
+  color: #716558;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left; }
+
+p {
+  text-align: left; }
 
 nav {
   display: block;
@@ -365,26 +394,25 @@ nav {
 
 .slider {
   display: flex;
-  justify-content: center; }
-
-.toplinks {
-  display: flex;
-  justify-content: space-around; }
+  justify-content: center;
+  margin-bottom: 20px; }
+  .slider img {
+    max-width: 1500px;
+    max-height: 403px;
+    width: 100%;
+    height: 100%; }
 
 .page-home {
   text-align: center; }
   .page-home section {
     max-width: 1200px;
-    margin: 50px auto;
-    padding: 40px;
+    margin: 0 auto;
     position: relative; }
     .page-home section h1 {
       font-weight: 700;
       line-height: 1;
       margin: 20px 0;
       letter-spacing: 1px; }
-  .page-home img {
-    max-width: 100%; }
   .page-home .flex-video-wrap {
     max-width: 640px;
     display: inline-block;
@@ -395,3 +423,87 @@ nav {
       margin-bottom: 0px; }
   .page-home .main {
     display: flex; }
+    .page-home .main > section {
+      margin: 0px 20px; }
+    .page-home .main .lhs {
+      max-width: 330px;
+      font-size: 16px;
+      font-family: "GoudyStd";
+      color: #716558;
+      line-height: 1;
+      text-align: left; }
+      .page-home .main .lhs ul {
+        list-style: none; }
+      .page-home .main .lhs li:before {
+        content: "";
+        border-color: transparent #111;
+        border-style: solid;
+        border-width: 0.35em 0 0.35em 0.45em;
+        display: block;
+        height: 0;
+        width: 0;
+        left: -1em;
+        top: 0.9em;
+        position: relative; }
+    .page-home .main .content {
+      max-width: 872px; }
+  .page-home .toplinks {
+    flex-flow: row, wrap;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around; }
+    .page-home .toplinks .thumb-unit {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      margin: 2px; }
+      .page-home .toplinks .thumb-unit:hover .thumb-overlay {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        -webkit-transition: all 0.15s ease-out 0s;
+        -moz-transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out 0s; }
+    .page-home .toplinks .thumb-overlay {
+      position: absolute;
+      top: 77%;
+      right: 0px;
+      left: 0px;
+      background-color: rgba(1, 1, 1, 0.5);
+        background-color--webkit-transition: all 0.15s ease-out 0s;
+        background-color--moz-transition: all 0.15s ease-out 0s;
+        background-color-transition: all 0.15s ease-out 0s; }
+      .page-home .toplinks .thumb-overlay strong {
+        text-align: center;
+        margin: 5px auto;
+        color: white;
+        font-size: 26px; }
+    .page-home .toplinks img {
+      width: 100%;
+      max-height: 235px;
+      max-width: 325px;
+      height: 100%;
+      margin: 0px;
+      display: block; }
+  .page-home .map {
+    max-width: 242px;
+    max-height: 241px;
+    width: 100%;
+    height: 100%; }
+  .page-home .news h2 {
+    font-size: 13px;
+    font-family: "Arial";
+    color: #002653;
+    line-height: 1.2;
+    text-align: left; }
+
+.directions {
+  font-size: 16px;
+  font-family: "MoolBoran";
+  color: #706558;
+  line-height: 0.5;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-left: 20px; }
