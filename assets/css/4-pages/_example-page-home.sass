@@ -111,9 +111,8 @@ nav
         +transition
     .thumb-overlay
       +position(absolute, 77% 0px null 0px)
-      background-color: fade-out(rgb(1,1,1), 0.5)
-      
-        +transition
+      background-color: fade-out(rgb(1,1,1), 0.7)
+      +transition
       strong
         text-align: center
         margin: 5px auto
@@ -147,3 +146,104 @@ nav
   text-align: left
   margin-left: 20px
 
+.box-shadow-menu
+  visibility: hidden
+  position: relative
+  padding-left: 1.25em
+  position: fixed
+  right: 20px
+  top: 40px
+  background-color: $bg
+  border-radius: 10px
+  color: black
+  padding: 8.5px
+  padding-left: 20px
+  z-index: 99999999
+  border: 2px solid white
+.box-shadow-menu:before
+  content: ""
+  position: absolute
+  left: .25em
+  top: 1em
+  width: 1em
+  height: 0.15em
+  background: black
+  box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black
+.open 
+  right:  0px !important
+
+@media (max-width: 900px)
+  .page-home
+    section
+      .thumb-overlay
+        strong
+          font-size: 20px !important 
+
+@media (max-width: 700px)
+  .box-shadow-menu
+    visibility: visible
+    z-index: 9
+  .page-home
+    section
+      .thumb-overlay
+        strong
+          font-size: 14px !important
+  .main
+    flex-direction: column-reverse
+  .map
+    display: inline-block
+    float: left
+    margin: 0 auto !important
+    text-align: center
+  .locations
+    float: left
+    margin: 0 auto !important
+  .lhs
+    max-width: 90% !important
+    width: 90%
+    ul 
+      clear: both
+      margin: auto
+      width: 90%
+      max-width: 90%
+  nav
+    position: absolute
+    z-index: 999
+    right: -160px
+    top: 20px
+    padding: 10px
+    background-color: darken($bg, 5%)
+    +transition
+    +border-left-radius(10px)
+    ul
+      flex-direction: column !important
+      li 
+        margin-right: 0px
+        padding: 10px
+        a 
+          text-align: right
+.rslides
+  margin: 0 auto
+@media (max-width: 750px)
+  .directions
+    line-height: 1
+@media (max-width: 564px)
+  .lhs
+    text-align: center !important
+  .map
+    float: none
+    display: inline-block !important
+    text-align: center
+  .locations
+    float: none
+    display: inline-block
+  .arrows
+    display: block
+    text-align: left
+
+@media (max-width: 520px)
+  .page-home
+    section
+      .thumb-overlay
+        strong
+          font-size: 10px !important

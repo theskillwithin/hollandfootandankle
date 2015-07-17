@@ -6,10 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/responsiveslides.js"></script>
+    <script>
+    $(function () {
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+        maxwidth: 1200,
+        speed: 800
+      });
+      });
+    </script>
   </head>
   <body>
     <header>
       <img class="logo" src="assets/img/logo.jpg">
+          <a href="#menu" id="#menu" class="box-shadow-menu">
+            Menu
+          </a>
       <nav>
         <ul>
           <li><a href="path_to_link.html">Home</a></li>
@@ -21,7 +35,11 @@
           <li><a href="path_to_link.html">Contact Us</a></li>
         </ul>
       </nav>
-      <div class="slider"><img src="assets/img/slider.jpg" alt="Slider"></div>
+      <ul class="rslides" id="slider1">
+        <li><img src="assets/img/1.jpg"></li>
+        <li><img src="assets/img/2.jpg"></li>
+        <li><img src="assets/img/3.jpg"></li>
+      </ul>
     </header>
     <div class="page-home">
       <section class="toplinks">
@@ -31,22 +49,24 @@
         </a>
         <a href="" class="thumb-unit">
         <img src="assets/img/faq.jpg" alt="Frequent Questions">
-        <div class="thumb-overlay"><strong>Meet Our Team</strong></div>
+        <div class="thumb-overlay"><strong>Frequent Questions</strong></div>
         </a>
         <a href="" class="thumb-unit">
         <img src="assets/img/common.jpg" alt="Common Foot Problems">
-        <div class="thumb-overlay"><strong>Meet Our Team</strong></div>
+        <div class="thumb-overlay"><strong>Common Foot Problems</strong></div>
         </a>
       </section>
       <section class="main">
         <section class="lhs">
           <img class="map" src="assets/img/map.jpg" height="241" width="242">
+          <div class="locations">
           <h3>Four Convenient Locations</h3>
           <p class="directions">Holland North <a href="">>map</a></p>
           <p class="directions">Holland South <a href="">>map</a></p>
           <p class="directions">Allegan <a href="">>map</a></p>
           <p class="directions">South Gaven <a href="">>map</a></p>
-          <ul>
+        </div>
+          <ul class="arrows">
             <li><a href="">When Should I Call A Doctor?</a></li>
             <li><a href="">Foot Conditions Glossary</a></li>
             <li><a href="">New Patient Forms</a></li>
@@ -89,7 +109,6 @@
         </section>
       </section>
     </div>
-    <script src="assets/js/jquery-2.1.4.min.js"></script>
     <script src="assets/js/functions.js" type="text/javascript"></script>
   </body>
 </html>
