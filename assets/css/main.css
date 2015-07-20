@@ -605,9 +605,10 @@ footer {
     footer .right img {
       align-left: flex-end;
       position: absolute;
-      right: 10px; }
+      right: 10px;
+      margin: 20px 10px 10px 10px; }
     footer .right .foottext {
-      margin-top: 120px; }
+      margin-top: 130px; }
     footer .right p {
       color: white;
       text-align: right;
@@ -660,9 +661,13 @@ footer {
       width: 90%;
       max-width: 90%; }
 
+  .navcontainer {
+    overflow: hidden; }
+
   nav {
-    position: absolute;
+    position: fixed;
     z-index: 999;
+    overflow: hidden;
     right: -160px;
     top: 20px;
     padding: 10px;
