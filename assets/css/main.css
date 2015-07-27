@@ -707,6 +707,22 @@ footer {
   max-width: 1500px !important;
   max-height: 403px !important; }
 
+.top {
+  background-color: #d5d7c6;
+  bottom: 2em;
+  color: #fff;
+  display: none;
+  opacity: 0.6;
+  padding: 1.5em 2em;
+  position: fixed;
+  right: 6em;
+  text-decoration: none;
+  z-index: 9999999999;
+  border: 1px solid black; }
+  .top:hover {
+    opacity: 1;
+    transition: 1s; }
+
 @media (max-width: 750px) {
   .directions {
     line-height: 1; } }
