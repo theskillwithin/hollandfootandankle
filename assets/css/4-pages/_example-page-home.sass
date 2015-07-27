@@ -42,6 +42,11 @@ nav
   display: block
   margin: 20px auto
   max-width: 1200px
+  border-top: 1px solid #B8BB9D
+  border-bottom: 1px solid #B8BB9D
+  a 
+    color: #706558
+    padding: 10px  null
 
 .slider
   display: flex
@@ -83,6 +88,7 @@ nav
       color: rgb(113, 101, 88)
       line-height: 1
       text-align: left
+      border-right: 1px solid #B8BB9D
       ul
         list-style: none
       li:before
@@ -103,6 +109,8 @@ nav
     margin: 40px auto
     display: flex
     justify-content: space-around
+    border-bottom: 1px solid #B8BB9D
+    padding-bottom: 20px
     .thumb-unit
       display: block
       overflow: hidden
@@ -133,12 +141,15 @@ nav
     width: 100%
     height: 100%
   .news
+    border-top: 1px solid #B8BB9D
     h2
       font-size: 13px
       font-family: "Arial"
       color: rgb(0, 38, 83)
       line-height: 1.2
       text-align: left
+    p 
+      padding-right: 10px
   .subpage
     h2
       font-size: 24px
@@ -277,7 +288,7 @@ footer
     position: fixed
     z-index: 999
     overflow: hidden
-    right: -160px
+    right: -200px
     top: 20px
     padding: 10px
     background-color: darken($bg, 5%)
@@ -292,6 +303,8 @@ footer
           text-align: right
 .rslides
   margin: 0 auto
+  max-width: 1500px !important
+  max-height: 403px !important
 @media (max-width: 750px)
   .directions
     line-height: 1
@@ -302,6 +315,7 @@ footer
 @media (max-width: 564px)
   .lhs
     text-align: center !important
+    border: none
   .map
     float: none
     display: inline-block !important
@@ -312,6 +326,8 @@ footer
   .arrows
     display: block
     text-align: left
+  .news 
+    margin-top: 20px
 
 @media (max-width: 520px)
   .page-home
