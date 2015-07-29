@@ -44,9 +44,16 @@ nav
   max-width: 1200px
   border-top: 1px solid #B8BB9D
   border-bottom: 1px solid #B8BB9D
+  li:last-child
+    a 
+      padding: 10px 5px
+      vertical-align: middle
+      display: flex
   a 
     color: #706558
     padding: 10px  null
+    img
+      +size(20px)
 
 .slider
   display: flex
@@ -159,7 +166,9 @@ nav
     width: 330px
     margin: 20px 5px
     color: white
-    padding: 20px
+    padding: 30px 20px
+    display: block
+    height: 550px
     a 
       color: white
     img
@@ -207,30 +216,35 @@ nav
   min-height: 100%
   margin: 0 auto -300px // the bottom margin is the negative value of the footer's height */
 footer
-  background-color: #706558
   width: 100%
   margin: 0px
-  height: 300px
   position: absolute
+  height: 300px
   display: flex
-  justify-content: space-between
-  .left
-    margin: 20px
-  .right
+  background-color: #706558
+  .footcontain
+    margin: 0 auto
+    width: 100%
+    max-width: 1200px
     display: flex
-    flex-direction: column
-    align-content: center
-    img
-      align-left: flex-end
-      position: absolute
-      right: 10px
-      margin: 20px 10px 10px 10px
-    .foottext
-      margin-top: 130px
-    p 
-      color: white
+    justify-content: space-between
+    .left
+      margin: 20px
+    .right
+      display: flex
+      flex-direction: column
       text-align: right
-      margin: 2px 10px
+      img
+        margin-top: 20px
+        margin-right: 0px
+        margin-left: auto
+        display: inline-block
+      .foottext
+        margin-top: 10px
+      p 
+        color: white
+        text-align: right
+        margin: 5px
 @media (max-width: 1200px)
   .page-home
     .subarticle
@@ -327,6 +341,14 @@ footer
   footer
     .left
       display: none
+    .right
+      margin: 0 auto
+      text-align: center
+      img
+        margin: 0 auto !important
+      .foottext
+        p
+          text-align: center
 @media (max-width: 564px)
   .lhs
     text-align: center !important
