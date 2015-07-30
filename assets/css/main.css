@@ -3,19 +3,22 @@
   font-style: normal;
   font-weight: 400;
   src: local("Fira Sans"), local("FiraSans-Regular"), url(http://fonts.gstatic.com/s/firasans/v5/EjsrzDkQUQCDwsBtLpcVQZBw1xU1rKptJj_0jans920.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
+
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 700;
   src: local("Fira Sans Bold"), local("FiraSans-Bold"), url(http://fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOhampu5_7CjHW5spxoeN3Vs.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
+
 @font-face {
   font-family: 'Fira Mono';
   font-style: normal;
   font-weight: 400;
   src: local("Fira Mono"), local("FiraMono"), url(http://fonts.gstatic.com/s/firamono/v3/SlRWfq1zeqXiYWAN-lnG-pBw1xU1rKptJj_0jans920.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -106,7 +109,6 @@ figure {
   margin: 1em 40px; }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -166,8 +168,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -236,16 +236,22 @@ body {
   background-color: white;
   font-size: 14px;
   line-height: 1.6;
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #666;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+::-moz-selection {
+  background: #FFF498; }
 
 ::selection {
   background: #FFF498; }
 
 ::-moz-selection {
   background: #FFF498; }
+
+img::-moz-selection {
+  background: transparent; }
 
 img::selection {
   background: transparent; }
@@ -260,7 +266,8 @@ a {
   color: #0074D9;
   text-decoration: none;
   outline: 0; }
-  a:hover, a:focus {
+  a:hover,
+  a:focus {
     color: #40a6ff; }
 
 .gigantic, .huge, .large, .bigger, .big,
@@ -323,7 +330,7 @@ input[type="button"] {
   font-size: 11px;
   font-weight: 600;
   line-height: 38px;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -332,7 +339,9 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
-  .button:hover, .button:active, .button:focus,
+  .button:hover,
+  .button:active,
+  .button:focus,
   button:hover,
   button:active,
   button:focus,
@@ -417,12 +426,18 @@ nav {
   border-top: 1px solid #B8BB9D;
   border-bottom: 1px solid #B8BB9D; }
   nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     list-style-type: none;
     padding: 0 10px;
     margin: 0 auto;
     overflow: hidden; }
     nav ul li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       margin: 0 auto; }
       nav ul li a {
@@ -432,17 +447,26 @@ nav {
   nav li:last-child a {
     padding: 10px 5px;
     vertical-align: middle;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
   nav a {
     color: #706558;
-    padding: 10px; }
+    padding: 10px  null; }
     nav a img {
       height: 20px;
       width: 20px; }
 
 .slider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 20px; }
   .slider img {
     max-width: 1500px;
@@ -470,6 +494,9 @@ nav {
     .page-home article:last-child {
       margin-bottom: 0px; }
   .page-home .main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
     .page-home .main > section {
       margin: 0px 20px; }
@@ -497,10 +524,17 @@ nav {
     .page-home .main .content {
       max-width: 872px; }
   .page-home .toplinks {
-    flex-flow: row, wrap;
+    -webkit-flex-flow: row, wrap;
+        -ms-flex-flow: row, wrap;
+            flex-flow: row, wrap;
     margin: 40px auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     border-bottom: 1px solid #B8BB9D;
     padding-bottom: 20px; }
     .page-home .toplinks .thumb-unit {
@@ -515,7 +549,6 @@ nav {
         bottom: 0px;
         left: 0px;
         -webkit-transition: all 0.15s ease-out 0s;
-        -moz-transition: all 0.15s ease-out 0s;
         transition: all 0.15s ease-out 0s; }
     .page-home .toplinks .thumb-overlay {
       position: absolute;
@@ -524,7 +557,6 @@ nav {
       left: 0px;
       background-color: rgba(1, 1, 1, 0.3);
       -webkit-transition: all 0.15s ease-out 0s;
-      -moz-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
       .page-home .toplinks .thumb-overlay strong {
         text-align: center;
@@ -578,7 +610,7 @@ nav {
   font-size: 16px;
   font-family: "MoolBoran";
   color: #706558;
-  line-height: 0.5;
+  line-height: .5;
   letter-spacing: 1px;
   text-align: left;
   margin-left: 20px; }
@@ -601,7 +633,7 @@ nav {
 .box-shadow-menu:before {
   content: "";
   position: absolute;
-  left: 0.25em;
+  left: .25em;
   top: 1em;
   width: 1em;
   height: 0.15em;
@@ -620,19 +652,35 @@ footer {
   margin: 0px;
   position: absolute;
   height: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   background-color: #706558; }
   footer .footcontain {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between; }
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     footer .footcontain .left {
       margin: 20px; }
     footer .footcontain .right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       text-align: right; }
       footer .footcontain .right img {
         margin-top: 20px;
@@ -649,41 +697,43 @@ footer {
 @media (max-width: 1200px) {
   .page-home .subarticle {
     width: 250px; } }
+
 @media (max-width: 1063px) {
   .page-home .subarticle {
     width: 200px; } }
+
 @media (max-width: 1000px) {
   .page-home .subarticle {
     width: 160px; }
   .page-home ul {
     margin-left: -25px; } }
+
 @media (max-width: 900px) {
   .page-home section .thumb-overlay strong {
     font-size: 20px !important; } }
+
 @media (max-width: 860px) {
   .page-home .subarticle {
     width: 500px; }
-
   .box-shadow-menu {
     visibility: visible;
     z-index: 9; }
-
   .page-home section .thumb-overlay strong {
     font-size: 14px !important; }
-
   .main {
-    flex-direction: column-reverse; }
-
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
   .map {
     display: inline-block;
     float: left;
     margin: 0 auto !important;
     text-align: center; }
-
   .locations {
     float: left;
     margin: 0 auto !important; }
-
   .lhs {
     max-width: 90% !important;
     width: 90%; }
@@ -692,10 +742,8 @@ footer {
       margin: auto;
       width: 90%;
       max-width: 90%; }
-
   .navcontainer {
     overflow: hidden; }
-
   nav {
     position: fixed;
     z-index: 999;
@@ -705,17 +753,21 @@ footer {
     padding: 10px;
     background-color: #e0e1d5;
     -webkit-transition: all 0.15s ease-out 0s;
-    -moz-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px; }
     nav ul {
-      flex-direction: column !important; }
+      -webkit-box-orient: vertical !important;
+      -webkit-box-direction: normal !important;
+      -webkit-flex-direction: column !important;
+          -ms-flex-direction: column !important;
+              flex-direction: column !important; }
       nav ul li {
         margin-right: 0px;
         padding: 10px; }
         nav ul li a {
           text-align: right; } }
+
 .rslides {
   margin: 0 auto;
   max-width: 1500px !important;
@@ -735,11 +787,13 @@ footer {
   border: 1px solid black; }
   .top:hover {
     opacity: 1;
-    transition: 1s; }
+    -webkit-transition: 1s;
+            transition: 1s; }
 
 @media (max-width: 750px) {
   .directions {
     line-height: 1; } }
+
 @media (max-width: 700px) {
   footer .left {
     display: none; }
@@ -750,26 +804,24 @@ footer {
       margin: 0 auto !important; }
     footer .right .foottext p {
       text-align: center; } }
+
 @media (max-width: 564px) {
   .lhs {
     text-align: center !important;
     border: none; }
-
   .map {
     float: none;
     display: inline-block !important;
     text-align: center; }
-
   .locations {
     float: none;
     display: inline-block; }
-
   .arrows {
     display: block;
     text-align: left; }
-
   .news {
     margin-top: 20px; } }
+
 @media (max-width: 520px) {
   .page-home section .thumb-overlay strong {
     font-size: 10px !important; } }
